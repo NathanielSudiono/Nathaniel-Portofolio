@@ -209,7 +209,7 @@ section {
   transform: scale(1.3) translateY(-5px);
   box-shadow: 0 0 30px var(--highlight-color);
   background-color: var(--highlight-color);
-  color: var (--white-color);
+  color: var(--white-color);
 }
 
 /* Button */
@@ -352,7 +352,7 @@ p {
   align-items: top;
   gap: 5rem;
   background-color: var(--bg-color);
-  background-image: linear-gradient(145deg, var(--bg-color) 60%, var(--secondary-color) 100%);
+  background-image: linear-gradient(145deg, var(--bg-color) 60%, var (--secondary-color) 100%);
   position: relative;
   overflow: hidden;
 }
@@ -399,18 +399,13 @@ p {
 /* Contact Section */
 #contact {
   display: flex;
-  justify-content: flex-start; /* Align items to the start (left) */
-  align-items: flex-start; /* Align items to the top */
+  justify-content: flex-start; /* Align items to the left */
+  align-items: center;
+  flex-direction: column; /* Stack items vertically on mobile */
   gap: 5rem;
   background-color: var(--bg2);
   background-image: linear-gradient(145deg, var(--bg2), var(--bg-color));
   position: relative;
-  padding-left: 10%; /* Ensure it aligns similarly to other sections */
-}
-
-.contact-content {
-  margin-top: 3rem;
-  max-width: 50vw; /* Adjust the width to match the About section */
 }
 
 .contact .title {
@@ -423,6 +418,12 @@ p {
 .contact p {
   font-size: 2.4rem;
   color: var(--text-color);
+}
+
+.contact .contact-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 h1 {
