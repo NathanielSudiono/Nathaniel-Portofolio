@@ -34,23 +34,6 @@ body {
   transition: background-color 0.5s ease, color 0.5s ease;
 }
 
-/* Custom Scrollbar */
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-::-webkit-scrollbar-track {
-  background: #f1f1f1;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #888;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #555;
-}
-
 /* Header */
 .header {
   position: fixed;
@@ -352,7 +335,7 @@ p {
   align-items: top;
   gap: 5rem;
   background-color: var(--bg-color);
-  background-image: linear-gradient(145deg, var(--bg-color) 60%, var (--secondary-color) 100%);
+  background-image: linear-gradient(145deg, var(--bg-color) 60%, var(--secondary-color) 100%);
   position: relative;
   overflow: hidden;
 }
@@ -399,13 +382,13 @@ p {
 /* Contact Section */
 #contact {
   display: flex;
-  justify-content: flex-start; /* Align items to the left */
-  align-items: center;
-  flex-direction: column; /* Stack items vertically on mobile */
+  justify-content: flex-start; /* Align content to the left */
+  align-items: flex-start; /* Align content to the top */
   gap: 5rem;
   background-color: var(--bg2);
   background-image: linear-gradient(145deg, var(--bg2), var(--bg-color));
   position: relative;
+  padding: 12rem 10%; /* Ensure consistent padding with other sections */
 }
 
 .contact .title {
@@ -418,12 +401,6 @@ p {
 .contact p {
   font-size: 2.4rem;
   color: var(--text-color);
-}
-
-.contact .contact-content {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
 }
 
 h1 {
@@ -455,7 +432,7 @@ form textarea {
   border: 1px solid var(--highlight-color);
   padding: 10px;
   margin: 10px 0;
-  width: 100%;
+  width: 80%;
   max-width: 500px;
   transition: border-color 0.3s ease;
 }
@@ -505,154 +482,23 @@ form textarea:focus {
   font-size: 1.6rem;
 }
 
-/* Responsive Media Queries */
-@media (max-width: 1104px) {
-  .about .about-content .left img {
-    height: 350px;
-    width: 350px;
-  }
-}
-
-@media (max-width: 991px) {
-  .max-width {
-    padding: 0 50px;
-  }
-}
-
-@media (max-width: 947px) {
-  .menu-btn {
-    display: block;
-    z-index: 999;
-  }
-
-  .menu-btn i.active:before {
-    content: "\f00d";
-  }
-
-  .navbar .menu {
-    position: fixed;
-    height: 100vh;
-    width: 100%;
-    left: -100%;
-    top: 0;
-    background: #111;
-    text-align: center;
-    padding-top: 80px;
-    transition: all 0.3s ease;
-  }
-
-  .navbar .menu.active {
-    left: 0;
-  }
-
-  .navbar .menu li {
-    display: block;
-  }
-
-  .navbar .menu li a {
-    display: inline-block;
-    margin: 20px 0;
-    font-size: 25px;
-  }
-
-  .home .home-content .text-2 {
-    font-size: 70px;
-  }
-
-  .home .home-content .text-3 {
-    font-size: 35px;
-  }
-
-  .home .home-content a {
-    font-size: 23px;
-    padding: 10px 30px;
-  }
-
-  .max-width {
-    max-width: 930px;
-  }
-
-  .about .about-content .column {
-    width: 100%;
-  }
-
-  .about .about-content .left {
-    display: flex;
-    justify-content: center;
-    margin: 0 auto 60px;
-  }
-
-  .about .about-content .right {
-    flex: 100%;
-  }
-
-  .services .serv-content .card {
-    width: calc(50% - 10px);
-    margin-bottom: 20px;
-  }
-
-  .skills .skills-content .column,
-  .contact .contact-content .column {
-    width: 100%;
-    margin-bottom: 35px;
-  }
-}
-
-@media (max-width: 690px) {
-  .max-width {
-    padding: 0 23px;
-  }
-
-  .home .home-content .text-2 {
-    font-size: 60px;
-  }
-
-  .home .home-content .text-3 {
-    font-size: 32px;
-  }
-
-  .home .home-content a {
-    font-size: 20px;
-  }
-
-  .services .serv-content .card {
-    width: 100%;
-  }
-}
-
-@media (max-width: 500px) {
-  .home .home-content .text-2 {
-    font-size: 50px;
-  }
-
-  .home .home-content .text-3 {
-    font-size: 27px;
-  }
-
-  .about .about-content .right .text,
-  .skills .skills-content .left .text {
-    font-size: 19px;
-  }
-
-  .contact .right form .fields {
+@media screen and (max-width: 768px) {
+  .home {
     flex-direction: column;
   }
 
-  .contact .right form .name,
-  .contact .right form .email {
-    margin: 0;
+  .home-img img {
+    width: 80vw;
+    margin-top: 3rem;
   }
 
-  .right form .error-box {
-    width: 150px;
+  .navbar {
+    display: none;
   }
 
-  .scroll-up-btn {
-    right: 15px;
-    bottom: 15px;
-    height: 38px;
-    width: 35px;
-    font-size: 23px;
-    line-height: 38px;
+  #menu-icon {
+    display: block;
+    font-size: 4rem;
+    color: var(--primary-color);
   }
 }
