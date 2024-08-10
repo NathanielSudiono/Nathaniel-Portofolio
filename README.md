@@ -1,3 +1,3 @@
-website: https://github.com/NathanielSudiono/Nathaniel-Portofolio/<br>
+website: https://github.com/NathanielSudiono/Nathaniel-Portofolio/index.html<br>
 <b>Web Project</b><br>
 Welcome to my Web Project! This is a simple website built with HTML, CSS, and JavaScript. The project demonstrates basic web development skills and can serve as a foundation for more complex web applications.
